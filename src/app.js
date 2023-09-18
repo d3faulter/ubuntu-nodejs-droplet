@@ -1,5 +1,4 @@
 const http = require('http');
-import * as emoji from 'node-emoji'
 
 // Test kommentar
 
