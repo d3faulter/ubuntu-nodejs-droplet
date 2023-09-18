@@ -1,4 +1,7 @@
 const http = require('http');
+import * as emoji from 'node-emoji'
+
+// Test kommentar
 
 const hostname = '127.0.0.1';
 const port = 3000;
