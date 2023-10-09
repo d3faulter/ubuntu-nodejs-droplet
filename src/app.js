@@ -4,7 +4,7 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
-// Define API endpoint to get users
+// API Endpoint
 app.get('/api/users', (req, res) => {
   const users = [
     { id: 1, name: 'John' },
