@@ -9,20 +9,12 @@ const server = http.createServer((req, res) => {
   res.end('Hej det gode hold\n');
 });
 
-
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-
-
-// HTTP req
-
-function makeHttpRequest() {
+// Function to make an internal HTTP request
+function makeInternalHttpRequest() {
   const options = {
-    hostname: 'api.example.com',
-    port: 80,
-    path: '/data',
+    hostname: 'localhost',
+    port: 3000,
+    path: '/',
     method: 'GET'
   };
 
@@ -34,13 +26,19 @@ function makeHttpRequest() {
     });
 
     res.on('end', () => {
-      console.log('Response Data:', JSON.parse(data));
+      console.log('Internal Response Data:', data);
     });
   });
 
   req.on('error', (error) => {
-    console.error('Request Error:', error);
+    console.error('Internal Request Error:', error);
   });
 
   req.end();
 }
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+  // Make an internal HTTP request to the server
+  makeInternalHttpRequest();
+});
