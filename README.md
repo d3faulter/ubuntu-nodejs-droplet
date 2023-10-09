@@ -1,2 +1,4 @@
 # ubuntu-nodejs-droplet
-Server running Node.js on Ubuntu
+## Express API on Ubuntu DigitalOcean droplet.
+
+School project for package interception with Wireshark
