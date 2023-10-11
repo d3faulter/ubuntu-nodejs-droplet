@@ -7,8 +7,9 @@ const server = http.createServer(app);
 // API Endpoint
 app.get('/api/users', (req, res) => {
   const users = [
-    { id: 1, name: 'John' },
-    { id: 2, name: 'Jane' }
+    { id: 1, name: 'Nicolas' },
+    { id: 2, name: 'Victor' },
+    { id: 3, name: 'Johnny' }
   ];
   res.json(users);
 });
