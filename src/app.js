@@ -1,6 +1,9 @@
 const express = require('express');
 const http = require('http');
 
+const hostname = '64.226.100.167';
+const port = 3000;
+
 const app = express();
 const server = http.createServer(app);
 
@@ -14,8 +17,7 @@ app.get('/api/users', (req, res) => {
   res.json(users);
 });
 
-const hostname = '64.226.100.167';
-const port = 3000;
+
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
