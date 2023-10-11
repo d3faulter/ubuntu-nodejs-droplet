@@ -14,7 +14,7 @@ app.get('/api/users', (req, res) => {
   res.json(users);
 });
 
-const hostname = '0.0.0.0';
+const hostname = '64.226.100.167';
 const port = 3000;
 
 server.listen(port, hostname, () => {
